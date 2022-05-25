@@ -8,7 +8,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-![Anotación 2022-05-25 162852](https://user-images.githubusercontent.com/21962846/170287243-c39e9c56-bdd6-4c3a-a5c5-e85fb9479b30.png)
 
 ## Build
 
@@ -21,6 +20,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Example View
+![Captura](https://user-images.githubusercontent.com/21962846/170287603-ab8de360-1c08-4904-ab43-f2cd6f0dce03.PNG)
+
 
 ## Further help
 
