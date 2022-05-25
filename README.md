@@ -1,6 +1,5 @@
 # Snake Angular
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6. #and is a copy from the originar NGX-SNAKE 
+This proyect is an copy from the original NGX-SNAKE edit with other options and customed options.
 
 ## Development server
 
