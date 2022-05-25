@@ -1,0 +1,38 @@
+<div class="principal">
+  <div class="game-container">
+    <div class="game-header">
+      <h3 class="logo">ngx-Snake</h3>
+      <div class="score-block">
+        <h3 class="score" [ngClass]="{'new-best-score': newBestScore}">Puntuacion: {{score}}</h3>
+        <h3 class="best-score" [ngClass]="{'new-best-score': newBestScore}">Mejor puntuacion: {{best_score}}</h3>
+      </div>
+    </div>
+    <div class="row" *ngFor="let column of board; let i = index;">
+      <div class="column" [ngStyle]="{'background-color': establecerColores(i, j)}"
+        *ngFor="let row of column; let j = index"></div>
+    </div>
+    <div class="start-button" [ngClass]="{'disable-clicks': gameStarted}" (click)="showMenu()">Empezar Juego</div>
+    <div class="new-game-menu" *ngIf="showMenuChecker">
+      <span class="new-game-menu-label">Seleccionar Modo</span>
+      <div class="start-button new-game-button" (click)="newGame(mode)" *ngFor="let mode of getKeys(all_modes)">
+        {{all_modes[mode]}}</div>
+    </div>
+  </div>
+  <div class="game-options">
+    <div class="options-header">
+      <h3 class="logo">ngx-Snake</h3>
+    </div>
+    <div class="body-options">
+      <div class="speed">
+        <a>Cambiar velocidad</a>
+        <span>Lento<i class="fas fa-minus" (click)="lowSpeed()"></i>{{" " + interval + " "}}<i class="fas fa-plus" (click)="upSpeed()">Rapido</i></span>
+      </div>
+      <div class="colors">
+        <a class="titulo">Cambiar color</a>
+        <span>Snake<app-select-colors (colorCambio)="cambioColor('Snake' , $event)"></app-select-colors></span>
+        <span>Fruit<app-select-colors (colorCambio)="cambioColor('Fruit' , $event)"></app-select-colors></span>
+        <span>Background <app-select-colors (colorCambio)="cambioColor('Background' , $event)"></app-select-colors></span>
+      </div>
+    </div>
+  </div>
+</div>
